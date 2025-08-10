@@ -4,6 +4,8 @@ weight: 10
 
 # Installation
 
+{{< badge style="info" title="Written by" value="Joysankar Majumdar" >}}
+
 The Fermi mission provides a suite of tools called the _[Fermitools](https://fermi.gsfc.nasa.gov/ssc/data/analysis/documentation/)_ for the analysis of LAT. We are not going to use _Fermitools_ directly; rather, we are going to use _[FermiPy](https://fermipy.readthedocs.io/en/latest/index.html)_.
 
 A Linux-based operating system is best for Fermi LAT analysis. We are going to follow the installation procedure for Ubuntu 24.04.2 LTS.
