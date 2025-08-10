@@ -1,5 +1,6 @@
 ---
 weight: 10
+bookCollapseSection: true
 ---
 
 # Positional Astronomy
