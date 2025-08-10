@@ -3,3 +3,29 @@ weight: 10
 ---
 
 # Installation
+
+The Fermi mission provides a suite of tools called the _[Fermitools](https://fermi.gsfc.nasa.gov/ssc/data/analysis/documentation/)_ for the analysis of LAT. We are not going to use _Fermitools_ directly; rather, we are going to use _[FermiPy](https://fermipy.readthedocs.io/en/latest/index.html)_.
+
+A Linux-based operating system is best for Fermi LAT analysis. We are going to follow the installation procedure for Ubuntu 24.04.2 LTS.
+
+{{% steps %}}
+1. We need to install the conda-forge distribution from the [GitHub](https://github.com/conda-forge/miniforge) repository. From the latest [release](https://github.com/conda-forge/miniforge/releases), download the _Miniforge**-Linux-x86_64.sh_ file. 
+
+2. Run this script file with the _bash_ command.
+   ```bash
+   bash Miniforge3-25.3.1-0-Linux-x86_64.sh 
+   ```
+   It will be installed in your system. Generally, it creates a folder _miniforge_ in the home directory.
+
+3. You need to export the path of the installed _miniforge_.
+   ```
+   export PATH=path_to_the_diretory/miniforge/condabin:$PATH
+   ```bash
+   And now, in that same terminal, you need to initialise conda.
+   ```bash
+   conda init
+   ```
+   Now close this terminal and open another terminal, and it should look like below
+   <img width="1632" height="91" alt="image" src="https://github.com/user-attachments/assets/603fd95f-2e1c-48ac-a3e3-72e070026607"/>
+   The (base) indicates the activation of the base environment in conda.
+{{% /steps %}}
