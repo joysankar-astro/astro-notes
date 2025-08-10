@@ -18,9 +18,9 @@ A Linux-based operating system is best for Fermi LAT analysis. We are going to f
    It will be installed in your system. Generally, it creates a folder _miniforge_ in the home directory.
 
 3. You need to export the path of the installed _miniforge_.
-   ```
-   export PATH=path_to_the_diretory/miniforge/condabin:$PATH
    ```bash
+   export PATH=path_to_the_diretory/miniforge/condabin:$PATH
+   ```
    And now, in that same terminal, you need to initialise conda.
    ```bash
    conda init
