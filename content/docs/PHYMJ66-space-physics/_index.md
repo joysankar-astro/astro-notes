@@ -1,12 +1,12 @@
 ---
 weight: 1
-bookFlatSection: true
+bookCollapseSection: true
 title: "Space Physics (PHYMJ66)"
 ---
 
 # PHYMJ66: Space Physics
 
-This course has been introduced by BHU in 2024 in the National Education Policy (NEP) 2020 framework to the BSc Physics major students. The syllabus of the course has been stated below.
+This course was introduced by BHU in 2024 in the National Education Policy (NEP) 2020 framework for the BSc Physics major students. The syllabus of the course is stated below.
 
 {{% steps %}}
 1. ## Positional Astronomy
