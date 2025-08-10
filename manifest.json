@@ -1,14 +1,14 @@
 {
   "name": "Astro-Notes",
   "short_name": "Astro-Notes",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "/astro-notes/",
+  "scope": "/astro-notes/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
   "icons": [
     {
-      "src": "/favicon.svg",
+      "src": "/astro-notes/favicon.svg",
       "sizes": "512x512"
     }
   ]
