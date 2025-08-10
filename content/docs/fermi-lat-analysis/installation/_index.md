@@ -28,4 +28,23 @@ A Linux-based operating system is best for Fermi LAT analysis. We are going to f
    Now close this terminal and open another terminal, and it should look like below
    <img width="1632" height="91" alt="image" src="https://github.com/user-attachments/assets/603fd95f-2e1c-48ac-a3e3-72e070026607"/>
    The (base) indicates the activation of the base environment in conda.
+
+4. We have to create another environment for FermiPy. Run the command below in the terminal.
+   ```bash
+   mamba create --name fermipy -c conda-forge -c fermi python=3.9 "fermitools>=2.2.0" healpy gammapy
+   ```
+   After this, to activate the new _fermipy_ environment, run
+   ```bash
+   mamba activate fermipy
+   ```
+5. You have to install the fermipy package inside the fermipy environment
+   ```bash
+   pip install fermipy
+   ```
+   Additionally, you should install the Jupyter Notebook for better coding
+   ```bash
+   pip install notebook
+   ```
 {{% /steps %}}
+
+You have successfully installed fermitools and FermiPy. Make sure to use FermiPy; you need to activate the _fermipy_ environment each time.
