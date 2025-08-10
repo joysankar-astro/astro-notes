@@ -1,4 +1,4 @@
-baseURL = 'https://localhost'
+baseURL = 'https://joysankar-astro.github.io/astro-notes/'
 languageCode = 'en-us'
 title = 'Astro-Notes'
 theme = "hugo-book"
