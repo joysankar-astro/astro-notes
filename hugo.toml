@@ -1,0 +1,22 @@
+baseURL = 'https://localhost/'
+languageCode = 'en-us'
+title = 'Astro-Notes'
+theme = "hugo-book"
+
+[markup]
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.tableOfContents]
+  startLevel = 1
+  
+[menu]
+[[menu.home]]
+  name = "Space Physics"
+  url = "/docs/phymj66-space-physics/"
+  weight = 1
+  
+[params]
+  BookTheme = 'auto'
+  BookToC = true
+
