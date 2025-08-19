@@ -24,6 +24,6 @@ Conventionally, we choose a search radius of 20$`\degree`$. Fermi LAT operates i
 
 Now download all the files in a separate folder. Some files will contain _PH_, and some will contain _SC_ in their names. The _PH_ files hold the photon data, and _SC_ will hold the spacecraft data during that observation.
 
-[!CAUTION]
-**Warning** 
-Make sure that the folder you create does not contain any spaces, otherwise your analysis will fail.
+> [!CAUTION]
+> **CAUTION** 
+> Make sure that the folder you create does not contain any spaces; otherwise, your analysis will fail.
