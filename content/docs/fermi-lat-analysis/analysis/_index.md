@@ -6,6 +6,13 @@ weight: 11
 
 I will be explaining how you can analyze the point sources detected by Fermi LAT.
 
+## Background model download
+We need to download the latest Galactic interstellar emission model and the Isotropic spectral template from this [page](https://fermi.gsfc.nasa.gov/ssc/data/access/lat/BackgroundModels.html). So download the _gll_iem_v07.fits_ and _iso_P8R3_SOURCE_V3_v1.txt_ for Event Selection of Pass 8 Source.
+
+Additionally, I will suggest downloading the latest Fermi LAT catalog in FITS format from this [link](https://fermi.gsfc.nasa.gov/ssc/data/access/lat/14yr_catalog/).
+
+Keep all these files in a separate folder, so that we can use them for each analysis.
+
 ## Data download
 Download the data for your specified source from the [link](https://fermi.gsfc.nasa.gov/cgi-bin/ssc/LAT/LATDataQuery.cgi).
 
@@ -15,9 +22,8 @@ For time conversion, you can use the [xTime](https://heasarc.gsfc.nasa.gov/cgi-b
 
 Conventionally, we choose a search radius of 20$`\degree`$. Fermi LAT operates in the energy range ~20 MeV to >300 GeV, but we can generally choose 100 MeV to 500 GeV. We need the spacecraft file also for analysis.
 
-## Background model download
-We need to download the latest Galactic interstellar emission model and the Isotropic spectral template from this [page](https://fermi.gsfc.nasa.gov/ssc/data/access/lat/BackgroundModels.html). So download the _gll_iem_v07.fits_ and _iso_P8R3_SOURCE_V3_v1.txt_ for Event Selection of Pass 8 Source.
+Now download all the files in a separate folder. Some files will contain _PH_, and some will contain _SC_ in their names. The _PH_ files hold the photon data, and _SC_ will hold the spacecraft data during that observation.
 
-Additionally, I will suggest downloading the latest Fermi LAT catalog in FITS format from this [link](https://fermi.gsfc.nasa.gov/ssc/data/access/lat/14yr_catalog/).
-
-Keep all these files in a separate folder, so that we can use them for each analysis.
+[!CAUTION]
+**Warning** 
+Make sure that the folder you create does not contain any spaces, otherwise your analysis will fail.
