@@ -22,8 +22,49 @@ For time conversion, you can use the [xTime](https://heasarc.gsfc.nasa.gov/cgi-b
 
 Conventionally, we choose a search radius of 20$`\degree`$. Fermi LAT operates in the energy range ~20 MeV to >300 GeV, but we can generally choose 100 MeV to 500 GeV. We need the spacecraft file also for analysis.
 
-Now download all the files in a separate folder. Some files will contain _PH_, and some will contain _SC_ in their names. The _PH_ files hold the photon data, and _SC_ will hold the spacecraft data during that observation.
+Now download all the files in a separate folder. Some files will contain _PH_, and some will contain _SC_ in their names. The _PH_ files hold the photon data, and _SC_ will hold the spacecraft data during that observation. Now, create a file that contains the list of _PH_ files using the code in the terminal opened in the same folder
+```
+ls *PH* > ph_list.dat
+```
+It will create a `ph_list.dat` file, which will list the _PH_ files.
 
 > [!CAUTION]
-> **CAUTION** 
 > Make sure that the folder you create does not contain any spaces; otherwise, your analysis will fail.
+
+## Configuration file
+You need to create a `config.yaml` file in that folder where the data is located. It is like a simple text file, which contains the configuration information. This file will be structured as below
+
+```YML
+data:
+  evfile : ph_list.dat
+  scfile : L250815080059DAC8B79833_SC00.fits
+
+binning:
+  roiwidth   : 20.0
+  binsz      : 0.1
+  binsperdec : 8
+
+selection :
+  emin : 100
+  emax : 500000
+  zmax    : 90
+  evclass : 128
+  evtype  : 3
+  tmin : 757382405.0
+  tmax : 776908805.0
+  filter : 'DATA_QUAL>0 && LAT_CONFIG==1'
+  target : '3C 138'
+
+gtlike:
+  edisp: true
+  irfs: 'P8R3_SOURCE_V3'
+  edisp_disable : ['isodiff','galdiff']
+
+model:
+  src_radius : 15.0
+  catalogs : '/home/joysankar/fermi-catlog/gll_psc_v35.fit'
+  galdiff  : '/home/joysankar/fermi-catlog/gll_iem_v07.fits'
+  isodiff  : '/home/joysankar/fermi-catlog/iso_P8R3_SOURCE_V3_v1.txt'
+```
+
+The `evfile` is the name of the _PH_ file list, which we have created previously. `scfile` is the spacecraft file you have already downloaded. Make sure to set emin (MeV), emax(MeV), tmin (MET), and tmax (MET). In `target`, put the object name, but better to use the 4FGL name. Make sure to give the appropriate path of catalogs, galdiff, and isodiff. `binsperdec` is a factor that determines the binning.
