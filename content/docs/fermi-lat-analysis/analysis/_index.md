@@ -3,6 +3,7 @@ weight: 11
 ---
 
 # Analysis
+{{< badge style="info" title="Written by" value="Joysankar Majumdar" >}}
 
 I will be explaining how you can analyze the point sources detected by Fermi LAT.
 
@@ -16,11 +17,11 @@ Keep all these files in a separate folder, so that we can use them for each anal
 ## Data download
 Download the data for your specified source from the [link](https://fermi.gsfc.nasa.gov/cgi-bin/ssc/LAT/LATDataQuery.cgi).
 
-<img width="610" height="290" alt="image" src="https://github.com/user-attachments/assets/c0af4537-753e-4d11-9a81-8fbb9a390b0b" />
+<img width="610" height="300" alt="image" src="https://github.com/user-attachments/assets/c0af4537-753e-4d11-9a81-8fbb9a390b0b" />
 
 For time conversion, you can use the [xTime](https://heasarc.gsfc.nasa.gov/cgi-bin/Tools/xTime/xTime.pl) tool.
 
-Conventionally, we choose a search radius of 20$`\degree`$. Fermi LAT operates in the energy range ~20 MeV to >300 GeV, but we can generally choose 100 MeV to 500 GeV. We need the spacecraft file also for analysis.
+Conventionally, we choose a search radius of 20 $`\degree`$. Fermi LAT operates in the energy range ~20 MeV to >300 GeV, but we can generally choose 100 MeV to 500 GeV. We need the spacecraft file also for analysis.
 
 Now download all the files in a separate folder. Some files will contain _PH_, and some will contain _SC_ in their names. The _PH_ files hold the photon data, and _SC_ will hold the spacecraft data during that observation. Now, create a file that contains the list of _PH_ files using the code in the terminal opened in the same folder
 ```
