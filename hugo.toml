@@ -12,8 +12,8 @@ theme = "hugo-book"
   
 [menu]
 [[menu.home]]
-  name = "Space Physics"
-  url = "/docs/phymj66-space-physics/"
+  name = "Fermi-LAT Analysis"
+  url = "/docs/fermi-lat-analysis/"
   weight = 1
   
 [params]
