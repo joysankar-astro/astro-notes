@@ -16,5 +16,4 @@ Currently, I am writing notes about the **Space Physics** course (PHYMJ66), whic
 
 
 [{{< badge style="warning" title="Fermi LAT Analysis" value="5%" >}}](/astro-notes/docs/fermi-lat-analysis/)
-[{{< badge style="warning" title="PHYMJ66: Space Physics" value="1%" >}}](/astro-notes/docs/phymj66-space-physics/)
 </div>
