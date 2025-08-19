@@ -68,3 +68,51 @@ model:
 ```
 
 The `evfile` is the name of the _PH_ file list, which we have created previously. `scfile` is the spacecraft file you have already downloaded. Make sure to set emin (MeV), emax(MeV), tmin (MET), and tmax (MET). In `target`, put the object name, but better to use the 4FGL name. Make sure to give the appropriate path of catalogs, galdiff, and isodiff. `binsperdec` is a factor that determines the binning.
+
+## Notebook analysis
+Now open a terminal in that folder and activate the `fermipy` environment.
+```
+conda activate fermipy
+```
+Then open a Jupyter Notebook and run the code attached below step by step.
+
+```python
+from fermipy.gtanalysis import GTAnalysis
+gta = GTAnalysis('config.yaml',logging={'verbosity' : 3})
+gta.setup()
+```
+It will take time and perform the initial analysis.
+```python
+gta.optimize()
+```
+It will fit the spectral parameters of the source.
+
+```python
+gta.print_roi()
+```
+It will show the sources with TS values
+Now we'll free the sources within the 3$`\degree`$ of ROI.
+
+```python
+gta.free_sources(free=False)
+gta.free_sources(distance=3.0,pars='norm')
+gta.free_source('4FGL J2321.9+2734')
+gta.free_source('galdiff')
+gta.free_source('isodiff')
+```
+You need to fit the parameters by running the code below
+```python
+gta.fit()
+```
+
+#### SED analysis
+```python
+sed = gta.sed('4FGL J2321.9+2734',make_plots=True)
+```
+It will generate a file like `4fgl_j0521.2+1637_sed.fits` which will be used for SED plotting.
+
+#### Light curve analysis
+```python
+lc = gta.lightcurve('4FGL J2321.9+2734', binsz=21600.0,outdir='6hrs_dir', multithread=True, nthread=3, write_fits=True)
+```
+It will generate a file like `4fgl_j1310.5+3221_lightcurve.fits` which will be used for light curve plotting. The binsz is the binning time in seconds. The multithread is for parallel calculation. The outdir is the directory where each bin file will be generated. The nthread is the number of parallel threads. It will take time based on the binning size.
