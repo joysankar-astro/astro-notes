@@ -13,5 +13,6 @@ Hi, I am [Joysankar Majumdar](https://joysankar-astro.github.io/), and I am writ
 ### Course progress
 
 
-[{{< badge style="warning" title="Fermi LAT Analysis" value="5%" >}}](/astro-notes/docs/fermi-lat-analysis/)
+[{{< badge style="warning" title="Fermi LAT Analysis" value="100%" >}}](/astro-notes/docs/fermi-lat-analysis/)
+[{{< badge style="warning" title="Heasoft Installation" value="100%" >}}](/astro-notes/docs/heasoft-installation/)
 </div>
